@@ -49,7 +49,7 @@ const ContactForm: React.FC = () => {
                 <h2 className="text-4xl font-bold text-gray-900 dark:text-white"><span className="text-neon-red">04.</span> Get In Touch</h2>
                 <p className="text-gray-600 dark:text-gray-400 text-lg">
                     I'm currently looking for new opportunities in Red Teaming and Offensive Security.
-                    Whether you have a question or just want to say hi, I'll try my best to get back to you!
+                    Whether you have a question or just want to say hi, I'll get back to you!
                 </p>
 
                 <div className="space-y-4">
@@ -68,9 +68,9 @@ const ContactForm: React.FC = () => {
                 </div>
 
                 <div className="flex space-x-4 pt-6">
-                    <a href="#" className="p-3 bg-gray-200 dark:bg-gray-800 rounded-full hover:bg-neon-red hover:text-white transition-colors text-gray-900 dark:text-white"><Github size={20} /></a>
-                    <a href="#" className="p-3 bg-gray-200 dark:bg-gray-800 rounded-full hover:bg-neon-red hover:text-white transition-colors text-gray-900 dark:text-white"><Linkedin size={20} /></a>
-                    <a href="#" className="p-3 bg-gray-200 dark:bg-gray-800 rounded-full hover:bg-neon-red hover:text-white transition-colors text-gray-900 dark:text-white"><Mail size={20} /></a>
+                    <a href="https://github.com/iam-elango" target="_blank" rel="noreferrer" className="p-3 bg-gray-200 dark:bg-gray-800 rounded-full hover:bg-neon-red hover:text-white transition-colors text-gray-900 dark:text-white"><Github size={20} /></a>
+                    <a href="https://www.linkedin.com/in/iamelango/" target="_blank" rel="noreferrer" className="p-3 bg-gray-200 dark:bg-gray-800 rounded-full hover:bg-neon-red hover:text-white transition-colors text-gray-900 dark:text-white"><Linkedin size={20} /></a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=elangovansanthalingam@gmail.com" target="_blank" rel="noreferrer" className="p-3 bg-gray-200 dark:bg-gray-800 rounded-full hover:bg-neon-red hover:text-white transition-colors text-gray-900 dark:text-white"><Mail size={20} /></a>
                 </div>
             </motion.div>
 

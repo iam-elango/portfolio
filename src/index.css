@@ -25,6 +25,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  overflow-y: auto;
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;

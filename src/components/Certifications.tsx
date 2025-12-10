@@ -34,7 +34,7 @@ const Certifications: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 className="text-center mb-12"
             >
-                <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4"><span className="text-neon-red">03.</span> Certifications</h2>
+                <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4"><span className="text-neon-red">$</span>Certifications</h2>
                 <p className="text-gray-600 dark:text-gray-400">Validated skills and achievements.</p>
             </motion.div>
 
@@ -51,11 +51,10 @@ const Certifications: React.FC = () => {
                         {/* Image Area */}
                         <div className="h-48 bg-gray-100 dark:bg-gray-800 relative z-10 flex items-center justify-center overflow-hidden">
                             {/* Fallback pattern or placeholder if image fails */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-300 dark:from-gray-800 dark:to-black opacity-50"></div>
                             <img
                                 src={cert.image}
                                 alt={cert.title}
-                                className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                                className="w-full h-full object-cover opacity-100 group-hover:opacity-100 transition-opacity"
                                 onError={(e) => {
                                     (e.target as HTMLImageElement).src = 'https://via.placeholder.com/400x300/1a1a1a/ff0033?text=Certificate';
                                 }}

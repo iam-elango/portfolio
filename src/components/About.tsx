@@ -4,14 +4,14 @@ import { SiHackthebox, SiTryhackme, SiMedium, SiLinkedin, SiGithub } from 'react
 
 const About: React.FC = () => {
     return (
-        <div className="container mx-auto px-4 py-20 flex flex-col items-center">
+        <div className="container mx-auto px-4 flex flex-col items-center">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 className="max-w-4xl w-full bg-white/80 dark:bg-black/40 backdrop-blur-md rounded-lg p-8 border border-gray-200 dark:border-gray-800 shadow-[0_0_15px_rgba(255,0,51,0.1)] hover:shadow-[0_0_20px_rgba(255,0,51,0.2)] transition-shadow"
             >
-                <h2 className="text-4xl font-bold mb-6 text-center text-gray-900 dark:text-white"><span className="text-neon-red">01.</span> About Me</h2>
+                <h2 className="text-4xl font-bold mb-6 text-center text-gray-900 dark:text-white"><span className="text-neon-red">$</span>whoami</h2>
 
                 <div className="space-y-6 text-gray-700 dark:text-gray-300 text-lg leading-relaxed font-light">
                     <p>

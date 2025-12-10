@@ -24,7 +24,7 @@ const Home: React.FC = () => {
     }, [text, typingSpeed]);
 
     return (
-        <div className="min-h-screen pt-16 flex items-center justify-center p-4">
+        <div className="h-screen overflow-hidden pt-16 flex items-center justify-center p-4">
             <div className="container mx-auto grid md:grid-cols-2 gap-8 items-center">
                 {/* Left Side - Text */}
                 <div className="text-center md:text-left space-y-4">
@@ -36,9 +36,6 @@ const Home: React.FC = () => {
                         Security Researcher | Penetration Tester | Ethical Hacker
                     </p>
                     <div className="flex justify-center md:justify-start space-x-4 pt-4">
-                        <Link to="/contact" className="px-6 py-3 border border-neon-red text-neon-red font-bold rounded hover:bg-neon-red/10 transition-all">
-                            Contact Me
-                        </Link>
                         <a
                             href="https://docs.google.com/document/d/1RhYQbvUe7X_mJOX9749WRrW3FhMo3aev/export?format=pdf"
                             target="_blank"
@@ -47,6 +44,9 @@ const Home: React.FC = () => {
                         >
                             Download Resume
                         </a>
+                        <Link to="/contact" className="px-6 py-3 border border-neon-red text-neon-red font-bold rounded hover:bg-neon-red/10 transition-all">
+                            Contact Me
+                        </Link>
                     </div>
                 </div>
 

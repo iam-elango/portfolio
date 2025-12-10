@@ -55,15 +55,15 @@ const ContactForm: React.FC = () => {
                 <div className="space-y-4">
                     <div className="flex items-center space-x-4 text-gray-700 dark:text-gray-300 hover:text-neon-red transition-colors cursor-pointer">
                         <Mail />
-                        <span>elangovan@example.com</span>
+                        <span>elangovansanthalingam@gmail.com</span>
                     </div>
                     <div className="flex items-center space-x-4 text-gray-700 dark:text-gray-300 hover:text-neon-red transition-colors cursor-pointer">
                         <Phone />
-                        <span>+91 98765 43210</span>
+                        <span>+91 89733 44303</span>
                     </div>
                     <div className="flex items-center space-x-4 text-gray-700 dark:text-gray-300 hover:text-neon-red transition-colors cursor-pointer">
                         <Linkedin />
-                        <span>linkedin.com/in/elangovan</span>
+                        <span>https://www.linkedin.com/in/iamelango/</span>
                     </div>
                 </div>
 

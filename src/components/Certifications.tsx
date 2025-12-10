@@ -4,25 +4,25 @@ import { Award } from 'lucide-react';
 
 const certifications = [
     {
+        title: "Certified Red Team Professional (CRTP)",
+        issuer: "Altered Security",
+        date: "2025",
+        image: "/src/assets/CRTP.png",
+        link: "https://www.credential.net/618bdfe1-cea0-4ada-bf4f-92c20097f628#acc.Dn4ZjBRT"  // Placeholder or verify link if available
+    },
+    {
         title: "Certified Ethical Hacker (CEH)",
         issuer: "EC-Council",
-        date: "2024",
-        image: "/assets/cert1.png", // Placeholder
-        link: "https://www.eccouncil.org/verified" // Hidden URL
+        date: "2025",
+        image: "/src/assets/CEH.png",
+        link: "https://www.eccouncil.org/verified"
     },
     {
-        title: "Offensive Security Certified Professional (OSCP)",
-        issuer: "OffSec",
-        date: "2023",
-        image: "/assets/cert2.png",
-        link: "https://www.offensive-security.com/verify"
-    },
-    {
-        title: "CompTIA Security+",
-        issuer: "CompTIA",
-        date: "2023",
-        image: "/assets/cert1.png",
-        link: "https://www.comptia.org/verify"
+        title: "Certified Network Security Practitioner (CNSP)",
+        issuer: "The SecOps Group",
+        date: "2025",
+        image: "/src/assets/CNSP.png",
+        link: "https://candidate.speedexam.net/certificate.aspx?SSTATE=am4131EniU8ntjp4bO5mXZjydJO1g7NUrws2P0BcFjaoOUFZHbT/2ziNSj9SSYisgqsqZSVL5SVNjberMk0doQecy6q/SxtUQc8/rmVrBAY="
     }
 ];
 

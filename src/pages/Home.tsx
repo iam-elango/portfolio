@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => {
     const [text, setText] = useState('');
-    const fullText = "I am Elangovan — Red Teamer";
+    const fullText = "I am Elangovan — Jr Red Teamer";
     const [typingSpeed, setTypingSpeed] = useState(150);
 
     useEffect(() => {
@@ -33,7 +33,7 @@ const Home: React.FC = () => {
                         <span className="animate-pulse">|</span>
                     </h1>
                     <p className="text-gray-400 text-lg md:text-xl max-w-lg mx-auto md:mx-0">
-                        Cybersecurity Enthusiast | Penetration Tester | Ethical Hacker
+                        Security Researcher | Penetration Tester | Ethical Hacker
                     </p>
                     <div className="flex justify-center md:justify-start space-x-4 pt-4">
                         <Link to="/contact" className="px-6 py-3 border border-neon-red text-neon-red font-bold rounded hover:bg-neon-red/10 transition-all">

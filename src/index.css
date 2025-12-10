@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-neon-red: #ff0033;
+  --color-neon-red-dark: #cc0029;
+  --color-dark-bg: #050505;
+  --color-terminal-green: #00ff00;
+  --color-terminal-black: #0c0c0c;
+
+  --shadow-neon: 0 0 10px rgba(255, 0, 51, 0.7), 0 0 20px rgba(255, 0, 51, 0.5);
+  --shadow-neon-hover: 0 0 20px rgba(255, 0, 51, 1), 0 0 40px rgba(255, 0, 51, 0.7);
+
+  --animate-pulse-fast: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-spin-slow: spin 10s linear infinite;
+}
+
+:root {
+  color-scheme: dark light;
+}
+
+body {
+  @apply bg-gray-100 text-gray-900 dark:bg-dark-bg dark:text-gray-100 transition-colors duration-300;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #e5e7eb;
+  /* bg-gray-200 */
+}
+
+:where(.dark) ::-webkit-scrollbar-track {
+  background-color: #000000;
+  /* bg-black */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ef4444;
+  /* bg-red-500 */
+  border-radius: 9999px;
+}
+
+:where(.dark) ::-webkit-scrollbar-thumb {
+  background-color: var(--color-neon-red);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #b91c1c;
+  /* bg-red-700 */
+}
+
+:where(.dark) ::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-neon-red-dark);
+}
+
+/* Utilities */
+.text-neon {
+  color: var(--color-neon-red);
+  filter: drop-shadow(0 0 5px rgba(255, 0, 51, 0.8));
+}
+
+.bg-neon-gradient {
+  background: radial-gradient(circle, rgba(255, 0, 51, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+.terminal-font {
+  font-family: 'Courier New', Courier, monospace;
+}

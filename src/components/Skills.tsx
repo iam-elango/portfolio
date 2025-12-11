@@ -1,20 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SiPython, SiReact, SiBurpsuite, SiDocker, SiWireshark, SiKalilinux, SiGnubash } from 'react-icons/si';
-import { FaNetworkWired, FaBug, FaShieldAlt, FaLock } from 'react-icons/fa';
+import { FaNetworkWired, FaBug, FaShieldAlt, FaLock, FaUserSecret } from 'react-icons/fa';
 
 const skills = [
-    { name: "Penetration Testing", icon: <FaBug />, level: "Advanced", category: "Core" },
-    { name: "Network Security", icon: <FaNetworkWired />, level: "Advanced", category: "Core" },
-    { name: "Web App Security", icon: <FaShieldAlt />, level: "Advanced", category: "Core" },
-    { name: "Cryptography", icon: <FaLock />, level: "Intermediate", category: "Core" },
-    { name: "Python Scripting", icon: <SiPython />, level: "Advanced", category: "Tools" },
-    { name: "Kali Linux", icon: <SiKalilinux />, level: "Expert", category: "Tools" },
-    { name: "Burp Suite", icon: <SiBurpsuite />, level: "Advanced", category: "Tools" },
-    { name: "Wireshark", icon: <SiWireshark />, level: "Advanced", category: "Tools" },
-    { name: "Bash Scripting", icon: <SiGnubash />, level: "Intermediate", category: "Tools" },
-    { name: "React & OS", icon: <SiReact />, level: "Intermediate", category: "Dev" },
-    { name: "Docker", icon: <SiDocker />, level: "Intermediate", category: "Dev" },
+    { name: "Red Team Operations", icon: <FaUserSecret />, category: "Core" },
+    { name: "Penetration Testing", icon: <FaBug />, category: "Core" },
+    { name: "Network Security", icon: <FaNetworkWired />, category: "Core" },
+    { name: "Web App Security", icon: <FaShieldAlt />, category: "Core" },
+    { name: "Infrastructure Security", icon: <FaLock />, category: "Core" },
+
 ];
 
 const container = {
@@ -41,9 +35,9 @@ const Skills: React.FC = () => {
                 transition={{ duration: 0.5 }}
                 className="text-center mb-12"
             >
-                <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4"><span className="text-neon-red">02.</span> Skills & Arsenal</h2>
+                <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4"><span className="text-neon-red">$</span>Skills & Arsenal</h2>
                 <p className="text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
-                    My technical toolkit and areas of expertise. Always learning, always evolving.
+                    My technical toolkit and areas of expertise.
                 </p>
             </motion.div>
 
@@ -65,7 +59,6 @@ const Skills: React.FC = () => {
                         </div>
                         <div className="text-center">
                             <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-neon-red transition-colors">{skill.name}</h3>
-                            <span className="text-xs text-gray-600 dark:text-gray-500 px-2 py-1 rounded-full bg-gray-200 dark:bg-gray-800 mt-2 inline-block border border-gray-300 dark:border-gray-700">{skill.level}</span>
                         </div>
                     </motion.div>
                 ))}

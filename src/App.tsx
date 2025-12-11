@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import ParticleBackground from './components/ParticleBackground';
 import ThemeToggle from './components/ThemeToggle';
+import SpiderCursor from './components/SpiderCursor';
 import Terminal from './components/Terminal';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -18,6 +19,7 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-transparent text-gray-900 dark:text-white font-sans selection:bg-neon-red selection:text-white overflow-x-hidden relative">
+        <SpiderCursor />
         <ParticleBackground />
         <Navbar toggleTerminal={() => setIsTerminalOpen(true)} />
         <ThemeToggle />

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import profileImg from '../assets/profile.jpg';
 
 const Home: React.FC = () => {
     const [text, setText] = useState('');
@@ -57,7 +58,7 @@ const Home: React.FC = () => {
                         <div className="relative w-full h-full rounded-full border-4 border-neon-red/50 shadow-neon overflow-hidden flex items-center justify-center bg-white/50 dark:bg-black/50 backdrop-blur-sm">
                             {/* Placeholder for user image */}
                             <img
-                                src="/profile.JPG"
+                                src={profileImg}
                                 alt="Elangovan"
                                 className="w-full h-full object-cover"
                                 onError={(e) => {

@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+* {
+  cursor: none !important;
+}
+
 @variant dark (&:where(.dark, .dark *));
 
 @theme {

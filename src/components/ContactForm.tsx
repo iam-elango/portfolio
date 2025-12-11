@@ -46,7 +46,7 @@ const ContactForm: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }}
                 className="md:w-1/2 space-y-8"
             >
-                <h2 className="text-4xl font-bold text-gray-900 dark:text-white"><span className="text-neon-red">04.</span> Get In Touch</h2>
+                <h2 className="text-4xl font-bold text-gray-900 dark:text-white"><span className="text-neon-red">$</span>Get In Touch</h2>
                 <p className="text-gray-600 dark:text-gray-400 text-lg">
                     I'm currently looking for new opportunities in Red Teaming and Offensive Security.
                     Whether you have a question or just want to say hi, I'll get back to you!
@@ -124,9 +124,8 @@ const ContactForm: React.FC = () => {
                             <span>Sending...</span>
                         ) : (
                             <>
-                                <Send size={18} />
-                                <Send size={18} />
                                 <span>Send Message</span>
+                                <Send size={18} />
                             </>
                         )}
                     </button>

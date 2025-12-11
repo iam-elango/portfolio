@@ -41,24 +41,29 @@ const Terminal: React.FC<TerminalProps> = ({ isOpen, onClose }) => {
             case 'about':
                 setHistory([
                     ...newHistory,
-                    'I am Elangovan, a Red Teamer and Cybersecurity Specialist.',
-                    'Passionate about Network Penetration Testing, Web App Security, and Breaking Things (Ethically).'
+                    'Hello! I\'m Elangovan, a passionate Red Teamer and Security Researcher.',
+                    'I began my cybersecurity journey in my 2nd year of college, refining a technical curiosity that drove me toward red teaming and adversary simulation.',
+                    'Now at 20, I’m a Certified Red Team Professional (CRTP) & Certified Ethical Hacker (CEH) with strong skills in Linux internals, computer networking, and red teaming.',
+                    '',
+                    'I’m proficient in areas like Attacking and Defending Active Directory, OffOpSec, Adversary Emulation/Simulation, Internal and External Pentesting, Infrastructure, and AppSec.',
+                    'I hold a Top 3% global rank on TryHackMe and actively hack on HackTheBox.',
+                    '',
+                    'I’m currently mastering advanced on-prem AD attacks, Windows internals, red team operations, offsec scripting, and preparing for the Certified Azure Red Team Professional certification.',
+                    'I love breaking, analysing, and understanding systems.'
                 ]);
                 break;
             case 'skills':
                 setHistory([
                     ...newHistory,
-                    'CORE: Penetration Testing, Network Security, Web App Security',
-                    'TOOLS: Python, Kali Linux, Burp Suite, Wireshark, Metasploit',
-                    'DEV: React, TypeScript, Docker'
+                    'CORE: Red Team Ops, Pen Testing, Network Sec, Web App Sec, Infra Sec'
                 ]);
                 break;
             case 'certs':
                 setHistory([
                     ...newHistory,
+                    '- CRTP (Certified Red Team Professional)',
                     '- CEH (Certified Ethical Hacker)',
-                    '- OSCP (Offensive Security Certified Professional)',
-                    '- CompTIA Security+'
+                    '- CNSP (Certified Network Security Practitioner)'
                 ]);
                 break;
             case 'contact':

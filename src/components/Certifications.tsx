@@ -46,10 +46,10 @@ const Certifications: React.FC = () => {
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ delay: index * 0.1 }}
                         whileHover={{ scale: 1.05 }}
-                        className="relative group bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-[0_0_20px_rgba(255,0,51,0.4)] transition-all duration-300"
+                        className="relative group bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-[0_0_20px_rgba(255,0,51,0.4)] transition-all duration-300 flex flex-col h-full"
                     >
                         {/* Image Area */}
-                        <div className="h-48 bg-gray-100 dark:bg-gray-800 relative z-10 flex items-center justify-center overflow-hidden">
+                        <div className="h-48 bg-gray-100 dark:bg-gray-800 relative z-10 flex items-center justify-center overflow-hidden shrink-0">
                             {/* Fallback pattern or placeholder if image fails */}
                             <img
                                 src={cert.image}
@@ -68,9 +68,9 @@ const Certifications: React.FC = () => {
                         </div>
 
                         {/* Content */}
-                        <div className="p-6 relative z-20 bg-white dark:bg-gray-900 group-hover:bg-gray-50 dark:group-hover:bg-gray-800 transition-colors">
-                            <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-neon-red transition-colors">{cert.title}</h3>
-                            <div className="flex justify-between items-center mt-2 text-sm text-gray-500">
+                        <div className="p-6 relative z-20 bg-white dark:bg-gray-900 group-hover:bg-gray-50 dark:group-hover:bg-gray-800 transition-colors flex flex-col flex-grow">
+                            <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-neon-red transition-colors mb-4">{cert.title}</h3>
+                            <div className="flex justify-between items-center mt-auto text-sm text-gray-500">
                                 <span>{cert.issuer}</span>
                                 <span>{cert.date}</span>
                             </div>

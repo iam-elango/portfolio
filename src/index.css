@@ -1,7 +1,9 @@
 @import "tailwindcss";
 
-* {
-  cursor: none !important;
+@media (min-width: 768px) {
+  * {
+    cursor: none !important;
+  }
 }
 
 @variant dark (&:where(.dark, .dark *));

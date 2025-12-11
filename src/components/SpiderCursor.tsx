@@ -19,7 +19,7 @@ const SpiderCursor: React.FC = () => {
 
     return (
         <motion.div
-            className="fixed top-0 left-0 z-[9999] pointer-events-none text-neon-red drop-shadow-[0_0_8px_rgba(255,0,51,0.8)]"
+            className="hidden md:block fixed top-0 left-0 z-[9999] pointer-events-none text-neon-red drop-shadow-[0_0_8px_rgba(255,0,51,0.8)]"
             animate={{ x: mousePosition.x - 12, y: mousePosition.y - 12, rotate: -35 }}
             transition={{ type: "spring", damping: 30, stiffness: 400, mass: 0.1 }}
         >

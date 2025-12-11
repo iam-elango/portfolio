@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Terminal } from 'lucide-react';
 
 interface NavbarProps {
@@ -8,6 +8,34 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ toggleTerminal }) => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const scrollToSection = (id: string) => {
+        setIsMobileMenuOpen(false);
+        if (location.pathname !== '/') {
+            navigate('/', { state: { scrollTo: id } });
+        } else {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    };
+
+    React.useEffect(() => {
+        if (location.pathname === '/' && location.state && (location.state as any).scrollTo) {
+            const id = (location.state as any).scrollTo;
+            const element = document.getElementById(id);
+            if (element) {
+                setTimeout(() => {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+            }
+            // Clear state
+            navigate(location.pathname, { replace: true, state: {} });
+        }
+    }, [location, navigate]);
 
     return (
         <nav className="fixed w-full z-50 bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-gray-200 dark:border-neon-red/20 text-gray-900 dark:text-white p-4">
@@ -29,10 +57,10 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTerminal }) => {
 
                 {/* Right Side: Desktop Links */}
                 <div className="flex space-x-6 hidden md:flex items-center">
-                    <Link to="/" className="hover:text-neon-red transition hover:scale-105 transform">Home</Link>
-                    <Link to="/about" className="hover:text-neon-red transition hover:scale-105 transform">About</Link>
-                    <Link to="/skills" className="hover:text-neon-red transition hover:scale-105 transform">Skills</Link>
-                    <Link to="/certifications" className="hover:text-neon-red transition hover:scale-105 transform">Certs</Link>
+                    <button onClick={() => scrollToSection('home')} className="hover:text-neon-red transition hover:scale-105 transform">Home</button>
+                    <button onClick={() => scrollToSection('about')} className="hover:text-neon-red transition hover:scale-105 transform">About</button>
+                    <button onClick={() => scrollToSection('skills')} className="hover:text-neon-red transition hover:scale-105 transform">Skills</button>
+                    <button onClick={() => scrollToSection('certifications')} className="hover:text-neon-red transition hover:scale-105 transform">Certs</button>
 
                     {/* Blogs Dropdown */}
                     <div className="relative group">
@@ -45,7 +73,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTerminal }) => {
                         </div>
                     </div>
 
-                    <Link to="/contact" className="hover:text-neon-red transition hover:scale-105 transform">Contact</Link>
+                    <button onClick={() => scrollToSection('contact')} className="hover:text-neon-red transition hover:scale-105 transform">Contact</button>
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -68,13 +96,13 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTerminal }) => {
             {/* Mobile Menu Dropdown */}
             {isMobileMenuOpen && (
                 <div className="md:hidden absolute top-full left-0 w-full bg-white/95 dark:bg-black/95 backdrop-blur-md border-b border-gray-200 dark:border-neon-red/20 py-4 flex flex-col items-center space-y-4 shadow-xl">
-                    <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-neon-red transition text-lg">Home</Link>
-                    <Link to="/about" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-neon-red transition text-lg">About</Link>
-                    <Link to="/skills" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-neon-red transition text-lg">Skills</Link>
-                    <Link to="/certifications" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-neon-red transition text-lg">Certs</Link>
+                    <button onClick={() => scrollToSection('home')} className="hover:text-neon-red transition text-lg">Home</button>
+                    <button onClick={() => scrollToSection('about')} className="hover:text-neon-red transition text-lg">About</button>
+                    <button onClick={() => scrollToSection('skills')} className="hover:text-neon-red transition text-lg">Skills</button>
+                    <button onClick={() => scrollToSection('certifications')} className="hover:text-neon-red transition text-lg">Certs</button>
                     <Link to="/blogs/ctf" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-neon-red transition text-lg">CTF Writeups</Link>
                     <Link to="/blogs/ad" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-neon-red transition text-lg">AD Writeups</Link>
-                    <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-neon-red transition text-lg">Contact</Link>
+                    <button onClick={() => scrollToSection('contact')} className="hover:text-neon-red transition text-lg">Contact</button>
                 </div>
             )}
         </nav>

@@ -27,11 +27,15 @@ function App() {
 
 
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/certifications" element={<Certifications />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/" element={
+            <>
+              <section id="home"><Home /></section>
+              <section id="about"><About /></section>
+              <section id="skills"><Skills /></section>
+              <section id="certifications"><Certifications /></section>
+              <section id="contact"><Contact /></section>
+            </>
+          } />
           <Route path="/blogs/ctf" element={<CTFWriteups />} />
           <Route path="/blogs/ad" element={<ADWriteups />} />
         </Routes>

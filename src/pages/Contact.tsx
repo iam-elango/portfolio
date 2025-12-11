@@ -3,7 +3,7 @@ import ContactForm from '../components/ContactForm';
 
 const Contact: React.FC = () => {
     return (
-        <div className="h-screen overflow-hidden pt-20">
+        <div className="min-h-screen pt-20 pb-10">
             <ContactForm />
         </div>
     );

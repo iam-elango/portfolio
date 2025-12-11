@@ -25,7 +25,7 @@ const Home: React.FC = () => {
     }, [text, typingSpeed]);
 
     return (
-        <div className="h-screen overflow-hidden pt-16 flex items-center justify-center p-4">
+        <div className="min-h-screen pt-16 flex items-center justify-center p-4">
             <div className="container mx-auto grid md:grid-cols-2 gap-8 items-center">
                 {/* Left Side - Text */}
                 <div className="text-center md:text-left space-y-4">

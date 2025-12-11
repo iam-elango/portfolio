@@ -1,27 +1,30 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Award } from 'lucide-react';
+import crtpImg from '../assets/CRTP.png';
+import cehImg from '../assets/CEH.png';
+import cnspImg from '../assets/CNSP.png';
 
 const certifications = [
     {
         title: "Certified Red Team Professional (CRTP)",
         issuer: "Altered Security",
         date: "2025",
-        image: "/src/assets/CRTP.png",
+        image: crtpImg,
         link: "https://www.credential.net/618bdfe1-cea0-4ada-bf4f-92c20097f628#acc.Dn4ZjBRT"  // Placeholder or verify link if available
     },
     {
         title: "Certified Ethical Hacker (CEH)",
         issuer: "EC-Council",
         date: "2025",
-        image: "/src/assets/CEH.png",
+        image: cehImg,
         link: "https://www.eccouncil.org/verified"
     },
     {
         title: "Certified Network Security Practitioner (CNSP)",
         issuer: "The SecOps Group",
         date: "2025",
-        image: "/src/assets/CNSP.png",
+        image: cnspImg,
         link: "https://candidate.speedexam.net/certificate.aspx?SSTATE=am4131EniU8ntjp4bO5mXZjydJO1g7NUrws2P0BcFjaoOUFZHbT/2ziNSj9SSYisgqsqZSVL5SVNjberMk0doQecy6q/SxtUQc8/rmVrBAY="
     }
 ];

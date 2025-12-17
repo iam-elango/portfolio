@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, Mail, Phone, Linkedin, Github } from 'lucide-react';
-import emailjs from '@emailjs/browser';
+// emailjs import removed
+
+// emailjs import removed
 
 const ContactForm: React.FC = () => {
     const [formData, setFormData] = useState({
@@ -11,31 +13,36 @@ const ContactForm: React.FC = () => {
     });
     const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setStatus('sending');
 
-        // EmailJS Configuration - User needs to fill these in
-        const SERVICE_ID = 'YOUR_SERVICE_ID';
-        const TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-        const PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify({
+                    access_key: "2fd261a3-a274-4e15-aaa0-9c4b4a781b45",
+                    ...formData,
+                }),
+            });
 
-        if (SERVICE_ID === 'YOUR_SERVICE_ID') {
-            setTimeout(() => {
-                setStatus('success');
-                alert('EmailJS is not configured. This is a simulation.');
-            }, 1500);
-            return;
-        }
+            const result = await response.json();
 
-        emailjs.send(SERVICE_ID, TEMPLATE_ID, formData, PUBLIC_KEY)
-            .then(() => {
+            if (result.success) {
                 setStatus('success');
                 setFormData({ name: '', email: '', message: '' });
-            }, (error) => {
-                console.error("EmailJS Error:", error);
+            } else {
+                console.error("Web3Forms Error:", result);
                 setStatus('error');
-            });
+            }
+        } catch (error) {
+            console.error("Submission Error:", error);
+            setStatus('error');
+        }
     };
 
     return (

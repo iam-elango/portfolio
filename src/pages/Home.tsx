@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+// Link removed
 import profileImg from '../assets/profile.jpg';
 
 const Home: React.FC = () => {
@@ -45,9 +45,12 @@ const Home: React.FC = () => {
                         >
                             Download Resume
                         </a>
-                        <Link to="/contact" className="px-6 py-3 border border-neon-red text-neon-red font-bold rounded hover:bg-neon-red/10 transition-all">
+                        <button
+                            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                            className="px-6 py-3 border border-neon-red text-neon-red font-bold rounded hover:bg-neon-red/10 transition-all"
+                        >
                             Contact Me
-                        </Link>
+                        </button>
                     </div>
                 </div>
 
